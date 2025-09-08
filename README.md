@@ -1,3 +1,12 @@
+# Fairmoney addition
+
+In branch `v1.0.3-fm-dev` we've added the diff proposed by currently [unmerged upstream PR #89](https://github.com/argoproj-labs/argocd-extension-metrics/pull/89):
+```shell
+$ curl -H "Accept: application/vnd.github.v3.diff" https://api.github.com/repos/argoproj-labs/argocd-extension-metrics/pulls/89 > pr-89-diff.patch
+$ git apply pr-89-diff.patch
+```
+This source code is being `git clone`d by the CI of [`github.com/fairmoney/argo-metrics-server-docker-build`](https://github.com/fairmoney/argo-metrics-server-docker-build) repo to build the `argo-metrics-server` image in service ECR (until upstream merges PR #89 and issues a new release).
+
 # ArgoCD Extension Metrics
 
 The project introduces the ArgoCD extension to enable Metrics on Resource tab.
